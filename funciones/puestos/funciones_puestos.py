@@ -40,8 +40,18 @@ def Operaciones_Puesto():
 
 def Informacion_Puesto(key):
         titulo="Informacion puesto"
-        puestos=DB['puestos']
+        puestos= DB['puestos']
         puestoRecibido=puestos.find_one({'identificador':key})
         return render_template('ADMINISTRADOR/puestos/informacion.html',titulo=titulo, puestos=puestoRecibido) 
 
+def Eliminar_Puesto(key):
+    puestos= DB['puestos']
+    puestos.delete_one({'identificador':key})
+    return redirect('/OPERACIONES-PUESTO')
 
+def Actualizar_puesto(key,campo):
+    puestos= DB['puestos']
+    dato=request.form['dato']
+    if dato:
+        puestos.update_one({'identificador':key},{'$set':{campo:dato}})
+    return redirect('/INFORMACION-PUESTO')      

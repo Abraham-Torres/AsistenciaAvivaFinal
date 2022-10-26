@@ -35,7 +35,7 @@
                   <td>{{ dato.edad }}</td>
                   <td>{{ dato.tipo_puesto }}</td>
                   <td class="text-center"> <a href="{{url_for('Informacion',key=dato.identificador)}}" class="btn btn-success"> <i class="fas fa-solid fa-pen nav-icon">
-                      </i> </a> <a href="" class="btn btn-danger"> 
+                      </i> </a> <a href="{{url_for('Eliminar_Puesto',key=dato.identificador)}}" class="btn btn-danger"> 
                         <i class="fas fa-solid fa-screwdriver fa-trash nav-icon"></i> </a></td>
                 </tr>
                 {% endfor %}

@@ -47,6 +47,16 @@ def Operaciones():
 def Informacion(key):
     return fun_puest.Informacion_Puesto(key)    
 
+#FUNCION DE INFORMACION/ELIMINAR
+@app.route('/ELIMINAR-PUESTO<key>')
+def Eliminar_Puesto(key):
+    return fun_puest.Eliminar_Puesto(key)
+
+#FUNCION DE INFORMACION/ACTUALIZAR
+@app.route('/ACTUALIZAR-PUESTO/<key>,<campo>',methods=['POST'])
+def Actualizar_Puesto(key,campo):
+    return fun_puest.Actualizar_puesto
+
 #FUNCION DE PAGINA NO ENCONTRADA    
 def Pagina_no_encontrada(error):
         return fun_serv.Error_404(error)
