@@ -55,7 +55,7 @@ def Eliminar_Puesto(key):
 #FUNCION DE INFORMACION/ACTUALIZAR
 @app.route('/ACTUALIZAR-PUESTO/<key>,<campo>',methods=['POST'])
 def Actualizar_Puesto(key,campo):
-    return fun_puest.Actualizar_puesto
+    return fun_puest.Actualizar_puesto(key,campo)
 
 #FUNCION DE PAGINA NO ENCONTRADA    
 def Pagina_no_encontrada(error):

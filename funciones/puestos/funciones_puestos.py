@@ -54,4 +54,4 @@ def Actualizar_puesto(key,campo):
     dato=request.form['dato']
     if dato:
         puestos.update_one({'identificador':key},{'$set':{campo:dato}})
-    return redirect('/INFORMACION-PUESTO')      
+    return Informacion_Puesto(key)      
