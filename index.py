@@ -13,6 +13,7 @@ import funciones.servidor.funciones_Servidor as fun_serv
 import funciones.homePage.funciones_HomePage as fun_home
 import funciones.puestos.funciones_puestos as fun_puest
 import funciones.puestosOperativos.funciones_puestosOperativos as fun_op
+import funciones.estadosOperativos.funciones_estadosOperativos as fun_status
 
 
 app=Flask(__name__)
@@ -76,14 +77,31 @@ def NuevoOperativo():
 def EliminarOperativo(key):
     return fun_op.EliminarPuestoOperativo(key)
 
+#**********************************************************************************************   
 
-#**********************************************************************************************    
+#FUNCION DE DB DE ESTADOS OPERATIVOS
+@app.route('/BASE-DATOS-ESTADOS-OPERATIVOS')
+def BaseDatosEstados():
+    return fun_status.EstadosOperativos()
+
+#FUNCION DE AGREGAR NUEVO ESTADO OPERATIVO
+@app.route('/NUEVO-ESTADO-OPERATIVO', methods=['POST'])  
+def NuevoEstadoOperativo():
+    return fun_status.NuevoEstado()  
+
+#FUNCION DE ELIMINAR ESTADOS OPERATIVOS
+@app.route('/ELIMINAR-ESTADO-OPERATIVO<key>')   
+def EliminarEstadoOperativo(key):
+    return fun_status.EliminarEstado(key) 
+
+#**********************************************************************************************
 
 #FUNCION DE PAGINA NO ENCONTRADA    
 def Pagina_no_encontrada(error):
         return fun_serv.Error_404(error)
 
 #**********************************************************************************************
+
 
 #HACEMOS EL CONSTRUCTOR.
 if __name__=='__main__':

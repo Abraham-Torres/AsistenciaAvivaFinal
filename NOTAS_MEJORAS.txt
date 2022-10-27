@@ -18,6 +18,9 @@ MEJORAS PARA SISTEMA WEB;
 Puesto>Administrar>Operaciones>Editar infomacion>Puesto: implementar un dropdown donde el usuario pueda seleccionar el Puesto
 dependiendo de los puestos operativos existentes en la bd.
 
+Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta)
+
 STATUS DEL SISTEMA:
 27/10/2022 - 12:42: El modulo de puestos operativos ya es funcional en su totalidad
+27/10/2022 - 1:33: El modulo de estados operativos ya es funcional en su totalidad
 
