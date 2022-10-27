@@ -14,6 +14,7 @@ import funciones.homePage.funciones_HomePage as fun_home
 import funciones.puestos.funciones_puestos as fun_puest
 import funciones.puestosOperativos.funciones_puestosOperativos as fun_op
 import funciones.estadosOperativos.funciones_estadosOperativos as fun_status
+import funciones.asistencia.funciones_asistencia as fun_asist
 
 
 app=Flask(__name__)
@@ -94,6 +95,11 @@ def NuevoEstadoOperativo():
 def EliminarEstadoOperativo(key):
     return fun_status.EliminarEstado(key) 
 
+#**********************************************************************************************
+#FUNCION DE DB DE ASISTENCIAS REGISTRADAS
+@app.route('/ASISTENCIAS')
+def BaseDatosAsistencia():
+    return fun_asist.AsistenciaDB()
 #**********************************************************************************************
 
 #FUNCION DE PAGINA NO ENCONTRADA    
