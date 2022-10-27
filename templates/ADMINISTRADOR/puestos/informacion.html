@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='dist/img/A-LOGO.png')}}">
+<html lang="en">
 {% include 'ADMINISTRADOR/modulos/header.html' %}
 
 <body class="hold-transition sidebar-mini">
@@ -181,7 +180,87 @@
             method="post">
             <div class="modal-header">
               <h4 class="modal-title">Modificar correo</h4>
-     
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" value="{{puestos.correo}}" class="form-control" name="dato" id="dato">
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+          <!-- /.modal-content -->
+        </div>
+      </div>
+      <!-- /.content -->
+      <div class="modal fade" id="edad">
+        <div class="modal-dialog modal-md">
+          <form class="modal-content" action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='edad')}}"
+            method="post">
+            <div class="modal-header">
+              <h4 class="modal-title">Modificar edad</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" value="{{puestos.edad}}" class="form-control" name="dato" id="dato">
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+          <!-- /.modal-content -->
+        </div>
+      </div>
+      <!-- /.content -->
+      <div class="modal fade" id="puesto">
+        <div class="modal-dialog modal-md">
+          <form class="modal-content" action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='puesto')}}"
+            method="post">
+            <div class="modal-header">
+              <h4 class="modal-title">Modificar puesto</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" value="{{puestos.tipo_puesto}}" class="form-control" name="dato" id="dato">
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+          <!-- /.modal-content -->
+        </div>
+      </div>
+      <!-- /.content -->
+      <div class="modal fade" id="telefono">
+        <div class="modal-dialog modal-md">
+          <form class="modal-content"
+            action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='telefono')}}" method="post">
+            <div class="modal-header">
+              <h4 class="modal-title">Modificar telefono</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" value="{{puestos.telefono}}" class="form-control" name="dato" id="dato">
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+          <!-- /.modal-content -->
+        </div>
+      </div>
     </div>
   
   <!-- /.content-wrapper -->
