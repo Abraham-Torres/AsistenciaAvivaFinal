@@ -12,6 +12,7 @@ y retornamos el alis del archivo, ademas de la funcion que hicimos dentro de fun
 import funciones.servidor.funciones_Servidor as fun_serv
 import funciones.homePage.funciones_HomePage as fun_home
 import funciones.puestos.funciones_puestos as fun_puest
+import funciones.puestosOperativos.funciones_puestosOperativos as fun_op
 
 
 app=Flask(__name__)
@@ -21,6 +22,8 @@ app=Flask(__name__)
 @app.route('/HOME')
 def HomePage():
     return fun_home.Home()
+
+#**********************************************************************************************
 
 #FUNCION PUESTO(FORMULARIO)
 @app.route('/REGISTRAR-PUESTO')
@@ -57,21 +60,30 @@ def Eliminar_Puesto(key):
 def Actualizar_Puesto(key,campo):
     return fun_puest.Actualizar_puesto(key,campo)
 
+#**********************************************************************************************
+# FUNCION  DE DB DE PUESTOS OPERATIVOS
+@app.route('/BASE-DATOS-PUESTOS-OPERATIVOS')
+def BaseDatosOperativos():
+    return fun_op.PuestoOperativoDb()
+
+#FUNCION DE AGREGAR PUESTOS OPERATIVOS
+@app.route('/NUEVO-PUESTO-OPERATIVO',methods = ['POST'])
+def NuevoOperativo():
+    return fun_op.NuevoPuestoOperativo()  
+
+#FUNCION DE ELIMINAR PUESTO OPERATIVOS 
+@app.route('/ELIMINAR-PUESTO-OPERATIVOS<key>')
+def EliminarOperativo(key):
+    return fun_op.EliminarPuestoOperativo(key)
+
+
+#**********************************************************************************************    
+
 #FUNCION DE PAGINA NO ENCONTRADA    
 def Pagina_no_encontrada(error):
         return fun_serv.Error_404(error)
 
-
-
-
-
-
-
-
-
-
-
-
+#**********************************************************************************************
 
 #HACEMOS EL CONSTRUCTOR.
 if __name__=='__main__':

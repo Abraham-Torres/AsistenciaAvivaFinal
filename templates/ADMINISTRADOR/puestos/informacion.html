@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='dist/img/A-LOGO.png')}}">  
 {% include 'ADMINISTRADOR/modulos/header.html' %}
-
 <body class="hold-transition sidebar-mini">
   <div class="wrapper">
     <!-- Navbar -->
@@ -24,11 +24,8 @@
                       src="{{ url_for('static', filename = 'dist/img/imagenes-menu/mozart.png')}}""
                       alt=" User profile picture">
                   </div>
-
                   <h3 class="profile-username text-center"></h3>
-
                   <p class="text-muted text-center"></p>
-
                   <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item">
                       <b>Cant. Productos</b> <a class="float-right">1,322</a>
@@ -40,13 +37,10 @@
                       <b>Cant. Vehiculos</b> <a class="float-right">13,287</a>
                     </li>
                   </ul>
-
-
                 </div>
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->
-
 
             </div>
             <!-- /.col -->
@@ -56,8 +50,6 @@
                   <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Datos
                         Generales</a></li>
-
-
                   </ul>
                 </div><!-- /.card-header -->
                 <div class="card-body">
@@ -68,7 +60,6 @@
                         <div class="col">
                           <div class="form-group">
                             <small>
-
                               Nombre Completo:
                               <button type="button" data-toggle="modal" data-target="#nombre"
                                 class="btn btn-xs btn-link btnOpenEdit"><i class="fa-solid fas fa-pen"></i>
@@ -133,10 +124,8 @@
                           <p id="vtitle"><span class="text-muted font-italic"></span></p>
                         </div>
                       </div>
-
                     </div>
                     <!-- /.tab-pane -->
-
                   </div>
                   <!-- /.tab-content -->
                 </div><!-- /.card-body -->
@@ -145,13 +134,11 @@
             </div>
             <!-- /.col -->
           </div>
-
           <!-- /.row -->
         </div><!-- /.container-fluid -->
-
       </div>
-
       <!-- /.content -->
+      <!--Modales-->
       <div class="modal fade" id="nombre">
         <div class="modal-dialog modal-md">
           <form class="modal-content" action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='nombre')}}"
@@ -262,14 +249,11 @@
         </div>
       </div>
     </div>
-  
-  <!-- /.content-wrapper -->
-  {% include 'ADMINISTRADOR/modulos/footer.html' %}
-  {% include 'ADMINISTRADOR/modulos/side-bar-control.html' %}
-</div>
-  
 
-
+    <!-- /.content-wrapper -->
+    {% include 'ADMINISTRADOR/modulos/footer.html' %}
+    {% include 'ADMINISTRADOR/modulos/side-bar-control.html' %}
+  </div>
   <!-- ./wrapper -->
   <!-- jQuery -->
   {% include 'ADMINISTRADOR/modulos/scripts.html' %}

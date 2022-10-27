@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from data_base import database as mongodb
-from forms.puesto import Puesto
+from forms.PUESTO.puesto import Puesto
 import random
 
 DB = mongodb.dbConecction()

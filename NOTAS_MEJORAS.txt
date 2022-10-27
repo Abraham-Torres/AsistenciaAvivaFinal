@@ -1,0 +1,23 @@
+COSAS POR HACER EN SISTEMA WEB:
+
+1. Implementar sesiones
+2. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados)
+3. Implementar que puedan subir foto de perfil
+4. Implementar en el homepage en los cuadros de puestos activos/inactivos que muestren realmente cuantos hay.
+
+COSAS POR HACER EN LA APP:
+1. Hacer el index
+2. Cambiar el sidebar (tiene el del admin)
+3. Implentar sesiones
+4. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados)
+5. Si ya registraron la asistencia desactivar/cambiar el boton
+6. Implementar que puedan subir foto de perfil
+
+
+MEJORAS PARA SISTEMA WEB;
+Puesto>Administrar>Operaciones>Editar infomacion>Puesto: implementar un dropdown donde el usuario pueda seleccionar el Puesto
+dependiendo de los puestos operativos existentes en la bd.
+
+STATUS DEL SISTEMA:
+27/10/2022 - 12:42: El modulo de puestos operativos ya es funcional en su totalidad
+
