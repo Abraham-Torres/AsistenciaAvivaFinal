@@ -1,6 +1,6 @@
 COSAS POR HACER EN SISTEMA WEB:
 
-1. Implementar sesiones
+1. Implementar sesiones (YA ESTA)
 2. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados)
 3. Implementar que puedan subir foto de perfil
 4. Implementar en el homepage en los cuadros de puestos activos/inactivos que muestren realmente cuantos hay.
@@ -21,10 +21,13 @@ MEJORAS PARA SISTEMA WEB;
 Puesto>Administrar>Operaciones>Editar infomacion>Puesto: implementar un dropdown donde el usuario pueda seleccionar el Puesto
 dependiendo de los puestos operativos existentes en la bd.
 
+Usuario/operador> implementar un apartado donde el usuario pueda cambiar su contraseña en caso de que se le haya olvidado (esta puede en el sidebar)
+
+
 Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta)
 
 STATUS DEL SISTEMA:
 27/10/2022 - 12:42: El modulo de puestos operativos ya es funcional en su totalidad
 27/10/2022 - 1:33: El modulo de estados operativos ya es funcional en su totalidad
 27/10/2022 - 3:38: TODOS LOS MODULOS SON OPERATIVOS (falta hacer lado de la app)
-
+27/10/2022 - 5:51: Las sesiones ya fueron implementadas, falta implementar seguridad en las rutas

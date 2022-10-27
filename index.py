@@ -15,10 +15,12 @@ import funciones.puestos.funciones_puestos as fun_puest
 import funciones.puestosOperativos.funciones_puestosOperativos as fun_op
 import funciones.estadosOperativos.funciones_estadosOperativos as fun_status
 import funciones.asistencia.funciones_asistencia as fun_asist
+import funciones.login.funciones_login as fun_log
 
 
 app=Flask(__name__)
 
+app.secret_key= b'\xd0\xf7!ug\xb8/\x89:\x83\t&\x8c\xfa\xa6^'
 
 #FUNCION DE HOMEPAGE
 @app.route('/HOME')
@@ -100,6 +102,18 @@ def EliminarEstadoOperativo(key):
 @app.route('/ASISTENCIAS')
 def BaseDatosAsistencia():
     return fun_asist.AsistenciaDB()
+#**********************************************************************************************
+#FUNCION DE SESION-ADMINISTRADOR.
+@app.route('/')
+@app.route('/INICIAR-SESION-ADMIN')
+def iniciarSesionAdmins():
+    return fun_log.IniciarSesion()
+
+#FUNCION DE COMPROBAR SESION-ADMINISTRADOR
+@app.route('/AUTENTICACION-ADMINISTRADOR', methods = ['POST'] )
+def autenticacionSesionAdmins():
+    return fun_log.AutenticacionAdmins()
+
 #**********************************************************************************************
 
 #FUNCION DE PAGINA NO ENCONTRADA    
