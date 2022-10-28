@@ -1,7 +1,7 @@
 COSAS POR HACER EN SISTEMA WEB:
 
 1. Implementar sesiones (YA ESTA)
-2. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados)
+2. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados) (YA ESTA SOLO FALTA EL DE LA APP)
 3. Implementar que puedan subir foto de perfil
 4. Implementar en el homepage en los cuadros de puestos activos/inactivos que muestren realmente cuantos hay.
 
@@ -31,3 +31,4 @@ STATUS DEL SISTEMA:
 27/10/2022 - 1:33: El modulo de estados operativos ya es funcional en su totalidad
 27/10/2022 - 3:38: TODOS LOS MODULOS SON OPERATIVOS (falta hacer lado de la app)
 27/10/2022 - 5:51: Las sesiones ya fueron implementadas, falta implementar seguridad en las rutas
+28/10/2022 - 3:32: La seguridad para las rutas ya fueron implementadas (para el admin) falta para el lado de la app

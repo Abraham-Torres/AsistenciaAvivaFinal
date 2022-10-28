@@ -115,6 +115,12 @@ def autenticacionSesionAdmins():
     return fun_log.AutenticacionAdmins()
 
 #**********************************************************************************************
+#FUNCIONES PARA PROOTEGER LAS RUTAS
+@app.before_request
+def VerificarSesiones():
+    return fun_log.verificacion()
+
+#**********************************************************************************************
 
 #FUNCION DE PAGINA NO ENCONTRADA    
 def Pagina_no_encontrada(error):

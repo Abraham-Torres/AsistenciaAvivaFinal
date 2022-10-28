@@ -28,3 +28,9 @@ def AutenticacionAdmins():
         return IniciarSesion()
     flash('Por favor llene todos los campos')      
     return IniciarSesion()
+
+def verificacion():
+    ruta = request.path
+    if 'usuario-administrador' in session and ruta != '/INICIAR-SESION-ADMIN' and ruta != 'AUTENTICACION-ADMINISTRADOR' and not ruta.startswith('/static'):
+        flash ('Por favor inicia sesion para continuar')
+        return redirect('INICIAR-SESION-ADMIN')
