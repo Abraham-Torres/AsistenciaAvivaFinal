@@ -23,7 +23,7 @@
             <h5 class="widget-user-desc text-right">{{puestos.tipo_puesto}}</h5>
           </div>
           <div class="widget-user-image">
-            <img class="img-circle" src="{{url_for('static',filename='dist/img/avatar.png')}}" alt="User Avatar">
+            <img class="img-circle" src="{{url_for('static',filename='dist/img/avatar.png')}}" alt="User profile image">
           </div>
           <div class="card-footer">
             <div class="row">
@@ -91,7 +91,7 @@
         <!--third card-->
         <div class="card card-widget widget-user shadow">
           <!-- Add the bg color to the header using any of the bg-* classes -->
-          <div class="widget-user-header text-white" style="background-color:grey;">
+          <div class="widget-user-header text-white" style="background-color:rgba(55, 168, 74, 0.773);">
             <h3 id="fecha"></h3>
             <h4 id="hora"></h4>
             <br>
@@ -99,14 +99,15 @@
 
           <div class="widget-user-image mb-4">
             <br>
+
             <button type="summit" class="btn btn-app bg-success">
               <i class="fas fa-clock"></i> Registrar
             </button>
-              
-              <button type="btn btn-app bg-danger">
-                <i class="fas fa-clock" disabled></i>
-              </button>
-                        
+            {% if puestos.activo == True %}
+            <button type="btn btn-app bg-danger">
+              <i class="fas fa-clock"></i> Finalizar 
+            </button>
+            {% endif %}
           </div>
           <div class="card-footer">
 

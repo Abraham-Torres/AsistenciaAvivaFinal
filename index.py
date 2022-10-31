@@ -147,6 +147,11 @@ def autenticacionSesionEmpleado():
 def HomeApp():
     return fun_app.homeAppPage()
 
+#FUNCION DE REGISTRAR ASISTENCIA APP
+@app.route('/ASISTENCIA-EMPLEADO')
+def AsistenciaEmpleado():
+    return fun_app.AsistenciaApp()    
+
 #**********************************************************************************************
 
 #FUNCION DE PAGINA NO ENCONTRADA    
