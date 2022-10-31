@@ -8,6 +8,10 @@ def IniciarSesion():
     titulo="iniciar sesion"
     return render_template('/ADMINISTRADOR/login/login.html',titulo=titulo)
 
+def CerrarSesionAdmin():
+    session.pop('usuario-administrador',None)
+    return redirect('/INICIAR-SESION-ADMIN')
+
 def AutenticacionAdmins():
     correo = request.form['correo']
     password = request.form['password']
@@ -31,6 +35,14 @@ def AutenticacionAdmins():
 
 def verificacion():
     ruta = request.path
-    if 'usuario-administrador' in session and ruta != '/INICIAR-SESION-ADMIN' and ruta != 'AUTENTICACION-ADMINISTRADOR' and not ruta.startswith('/static'):
-        flash ('Por favor inicia sesion para continuar')
-        return redirect('INICIAR-SESION-ADMIN')
+    if 'usuario-puesto' in session:
+        pass
+    elif not 'usuario-administrador' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-PUESTO" and ruta !='/INICIAR-SESION-PUESTO' and not ruta.startswith("/static"):
+        flash("inicia sesion para continuar")
+        return redirect('/INICIAR-SESION-ADMIN')
+    if 'usuario-administrador' in session:
+        pass
+    elif not 'usuario-puesto' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-PUESTO" and ruta !='/INICIAR-SESION-PUESTO' and not ruta.startswith("/static"):
+        flash("inicia sesion para continuar")
+        return redirect('/INICIAR-SESION-PUESTO')
+

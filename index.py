@@ -114,6 +114,11 @@ def iniciarSesionAdmins():
 def autenticacionSesionAdmins():
     return fun_log.AutenticacionAdmins()
 
+#FUNCION DE CERRAR SESION ADMINISTRADOR
+@app.route('/CERRAR-SESION-ADMINISTRADOR')
+def CerrarSesionAdmins():
+    return fun_log.CerrarSesionAdmin()     
+
 #**********************************************************************************************
 #FUNCIONES PARA PROOTEGER LAS RUTAS
 @app.before_request
