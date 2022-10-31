@@ -9,23 +9,23 @@ COSAS POR HACER EN LA APP:
 1. Hacer el index (YA ESTA)
 2. Cambiar el sidebar (tiene el del admin)
 3. Implentar sesiones (YA ESTA)
-4. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados) (YA ESTA PERO TIENE BUG)
+4. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados) (YA ESTA)
 5. Si ya registraron la asistencia desactivar/cambiar el boton
 6. Implementar que puedan subir foto de perfil
 
 
 NOTAS PARA MI:
 * Intenta por medio de la interpolacion jalar el script del reloj (app)
-* Revisa porque la seguridad de las rutas, ya que solo te retorna a iniciar sesion empleado y no permite entrar a admin
+* Revisa porque la seguridad de las rutas, ya que solo te retorna a iniciar sesion empleado y no permite entrar a admin (YA ESTA CORREGIDO)
 
 MEJORAS PARA SISTEMA WEB;
 Puesto>Administrar>Operaciones>Editar infomacion>Puesto: implementar un dropdown donde el usuario pueda seleccionar el Puesto
 dependiendo de los puestos operativos existentes en la bd.
 
 Usuario/operador> implementar un apartado donde el usuario pueda cambiar su contraseña en caso de que se le haya olvidado (esta puede en el sidebar)
+(YA ESTA EN EL SIDEBAR, FALTA DARLE FUNCIONALIDAD)
 
-
-Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta)
+Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta) (YA ESTA IMPLEMENTADO)
 
 STATUS DEL SISTEMA:
 27/10/2022 - 12:42: El modulo de puestos operativos ya es funcional en su totalidad
@@ -36,3 +36,4 @@ STATUS DEL SISTEMA:
 31/10/2022 - 9:32: La seguridad en las rutas ya esta implementadas de forma correcta, ademas de la destruccion de sesiones.
 31/10/2022 - 12:02: El login para la app ya estan implementadas,ademas de las sesiones. (testea por cualquier cosa)
 31/10/2022 - 1:35: Se ha cambiado el menu para la app (ya no tiene el de admin), ademas de cambiar el banner
+31/10/2022 - 4:33: Se ha implementado el live tale de fecha y hora.

@@ -35,7 +35,7 @@ def AutenticacionAdmins():
 
 def verificacion():
     ruta = request.path
-    if 'usuario-puesto' in session:
+    if 'usuario-empleado' in session:
         pass
     elif not 'usuario-administrador' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-APP" and ruta !='/INICIAR-SESION-EMPLEADO' and not ruta.startswith("/static"):
         flash("inicia sesion para continuar")
