@@ -23,7 +23,7 @@ def AutenticacionAdmins():
             if(check_password_hash(AdminRecibido['password'], password)==True):
                 session['usuario-administrador'] = AdminRecibido['correo']
                 usuario = True
-                session.pop('usuario-puesto',None)
+                session.pop('usuario-empleado',None)
                 return redirect('/HOME')    
             elif(check_password_hash(AdminRecibido['password'],password)==False):
                 flash('Error: Contraseña incorrecta')
@@ -37,12 +37,12 @@ def verificacion():
     ruta = request.path
     if 'usuario-puesto' in session:
         pass
-    elif not 'usuario-administrador' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-PUESTO" and ruta !='/INICIAR-SESION-PUESTO' and not ruta.startswith("/static"):
+    elif not 'usuario-administrador' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-APP" and ruta !='/INICIAR-SESION-EMPLEADO' and not ruta.startswith("/static"):
         flash("inicia sesion para continuar")
         return redirect('/INICIAR-SESION-ADMIN')
     if 'usuario-administrador' in session:
         pass
-    elif not 'usuario-puesto' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-PUESTO" and ruta !='/INICIAR-SESION-PUESTO' and not ruta.startswith("/static"):
+    elif not 'usuario-empleado' in session and ruta !="/INICIAR-SESION-ADMIN" and ruta !='/AUTENTICACION-ADMINISTRADOR' and ruta != "/AUTENTICACION-APP" and ruta !='/INICIAR-SESION-EMPLEADO' and not ruta.startswith("/static"):
         flash("inicia sesion para continuar")
-        return redirect('/INICIAR-SESION-PUESTO')
+        return redirect('/INICIAR-SESION-EMPLEADO')
 

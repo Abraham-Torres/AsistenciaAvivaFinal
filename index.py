@@ -16,6 +16,7 @@ import funciones.puestosOperativos.funciones_puestosOperativos as fun_op
 import funciones.estadosOperativos.funciones_estadosOperativos as fun_status
 import funciones.asistencia.funciones_asistencia as fun_asist
 import funciones.login.funciones_login as fun_log
+import funciones.aplicacion.funciones_aplicacion as fun_app
 
 
 app=Flask(__name__)
@@ -124,6 +125,27 @@ def CerrarSesionAdmins():
 @app.before_request
 def VerificarSesiones():
     return fun_log.verificacion()
+
+#**********************************************************************************************
+#FUNCION DE LOGIN DE LA APP
+@app.route('/INICIAR-SESION-EMPLEADO')
+def IniciarSesionEmpleado():
+    return fun_app.iniciarSesionApp()
+
+#FUNCION DE CERRAR SESION DE APP
+@app.route('/CERRAR-SESION-EMPLEADO')
+def cerrarSesionEmpleado():
+    return fun_app.CerrarSesionEmpleado()
+
+#FUNCION DE COMPROBAR SESION-EMPLEADO
+@app.route('/AUTENTICACION-APP', methods = ['POST'])
+def autenticacionSesionEmpleado():
+    return fun_app.AutenticacionEmpleado()
+
+#FUNCION DE HOME PAGE DE LA APP
+@app.route('/HOME-APP')
+def HomeApp():
+    return fun_app.homeAppPage()
 
 #**********************************************************************************************
 

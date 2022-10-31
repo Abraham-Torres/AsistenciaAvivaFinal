@@ -33,3 +33,4 @@ STATUS DEL SISTEMA:
 27/10/2022 - 5:51: Las sesiones ya fueron implementadas, falta implementar seguridad en las rutas
 28/10/2022 - 3:32: La seguridad para las rutas no estan implementadas de forma correcta
 31/10/2022 - 9:32: La seguridad en las rutas ya esta implementadas de forma correcta, ademas de la destruccion de sesiones.
+31/10/2022 - 12:02: El login para la app ya estan implementadas,ademas de las sesiones. (testea por cualquier cosa)
