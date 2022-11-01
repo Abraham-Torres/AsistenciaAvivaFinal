@@ -13,7 +13,7 @@
     {% include 'APLICACION/modulos/menu.html' %}
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-      <form class="container mt-4" action='/Asistencia-Empleado' method="post">
+      <form class="container mt-4" action='/ASISTENCIA-EMPLEADO' method="post">
         <!-- Widget: user widget style 1 -->
         <div class="card card-widget widget-user shadow">
           <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -99,12 +99,12 @@
 
           <div class="widget-user-image mb-4">
             <br>
-
+            
             <button type="summit" class="btn btn-app bg-success">
               <i class="fas fa-clock"></i> Registrar
             </button>
-            {% if puestos.activo == True %}
-            <button type="btn btn-app bg-danger">
+            {% if asistencia.activo == True %}
+            <button type="summit" class="btn btn-app bg-danger">
               <i class="fas fa-clock"></i> Finalizar 
             </button>
             {% endif %}

@@ -39,3 +39,4 @@ STATUS DEL SISTEMA:
 31/10/2022 - 1:35: Se ha cambiado el menu para la app (ya no tiene el de admin), ademas de cambiar el banner
 31/10/2022 - 4:33: Se ha implementado el live tale de fecha y hora.
 31/10/2022 - 5:50: Se intento hacer lo de asistencia (hay fallos de logica)
+01/11/2022 - 12:11: El sistema ya registra la asistencia (inicio) falta hacer cuando termine la jornada (fin)

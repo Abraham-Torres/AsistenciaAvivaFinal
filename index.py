@@ -148,9 +148,9 @@ def HomeApp():
     return fun_app.homeAppPage()
 
 #FUNCION DE REGISTRAR ASISTENCIA APP
-@app.route('/ASISTENCIA-EMPLEADO')
+@app.route('/ASISTENCIA-EMPLEADO', methods = ['POST'])
 def AsistenciaEmpleado():
-    return fun_app.AsistenciaApp()    
+    return fun_asist.AsistenciaApp()    
 
 #**********************************************************************************************
 

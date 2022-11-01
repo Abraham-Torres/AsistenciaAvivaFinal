@@ -1,8 +1,7 @@
 from flask import render_template, request, session, redirect, flash
 from data_base import database as mongodb
 from werkzeug.security import check_password_hash
-from forms.ASISTENCIA.asistencia import Asistencia 
-import time
+
 
 DB = mongodb.dbConecction()
 
@@ -42,27 +41,9 @@ def homeAppPage():
         titulo='Incio APP'
         datosPuestoDB = DB['puestos']
         datosEstadoDB = DB['estadoscat']
+        AsistenciaDB = DB ['asistencia']
         Estado = datosEstadoDB.find()
         puestos = datosPuestoDB.find_one({'correo':session['usuario-empleado']})
-        return render_template('/APLICACION/index.html',titulo=titulo,Estado=Estado,puestos=puestos)
+        return render_template('/APLICACION/index.html',titulo=titulo,Estado=Estado,puestos=puestos, asistencia=AsistenciaDB)
 
-def AsistenciaApp():
-    if 'usuario-administrador' in session:
-        return redirect('/INICIAR-SESION-EMPLEADO')
-    elif 'usuario-empleado' in session:
-         datosPuestoDB = DB['puestos']
-         asistenciaDB = DB['asistencia']
-         DatosPuesto = datosPuestoDB.find_one({'correo':session['usuario-empleado']})
-         nombre = DatosPuesto['nombre']
-         fecha = time.strftime('%d-%m-%y')
-         puesto = DatosPuesto['tipo_puesto']
-         identificador = str(fecha)+str(session['usuario-empleado'])
-         operativo = request.form['EstadoOperativo']
-         inicio = time.strftime('%X')
-         fin = '00:00:00'
-         activo = False
-
-         if identificador and nombre and fecha and inicio and operativo and puesto and fin and activo:
-            asistencia=Asistencia(identificador, nombre, fecha, inicio, operativo, puesto, fin, activo)
-            asistenciaDB.insert_one(asistencia.datosAsistenciaJson())
-            return redirect('/HOME-APP')          
+        
