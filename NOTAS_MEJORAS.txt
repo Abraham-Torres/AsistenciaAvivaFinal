@@ -4,6 +4,7 @@ COSAS POR HACER EN SISTEMA WEB:
 2. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados) (YA ESTA IMPLEMENTADO)
 3. Implementar que puedan subir foto de perfil
 4. Implementar en el homepage en los cuadros de puestos activos/inactivos que muestren realmente cuantos hay.
+5. Implementar un modal de advertencia al momento de borrar algun dato
 
 COSAS POR HACER EN LA APP:
 1. Hacer el index (YA ESTA)

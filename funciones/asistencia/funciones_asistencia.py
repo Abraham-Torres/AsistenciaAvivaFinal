@@ -28,13 +28,9 @@ def AsistenciaApp():
          inicio = time.strftime('%X')
          fin = '00:00:00'
 
-
          if identificador and nombre and fecha and inicio and operativo and puesto and fin:
             asistencia=Asistencia(identificador, nombre, fecha, inicio, operativo, puesto, fin)
             asistenciaDB.insert_one(asistencia.datosAsistenciaJson())
-
-
-        
     return redirect('/HOME-APP')      
 
 def AsistenciaFinalizada():
@@ -47,8 +43,6 @@ def AsistenciaFinalizada():
     identificador = str(fecha)+str(session['usuario-empleado'])
     asistenciaDB = DB['asistencia']
     asistenciaDB.update_one({'identificador':identificador},{'$set':{'fin':hora}})
-
-
     return redirect('/HOME-APP')
 
 
