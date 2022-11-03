@@ -21,7 +21,7 @@ NOTAS PARA MI:
 
 MEJORAS PARA SISTEMA WEB;
 Puesto>Administrar>Operaciones>Editar infomacion>Puesto: implementar un dropdown donde el usuario pueda seleccionar el Puesto
-dependiendo de los puestos operativos existentes en la bd.
+dependiendo de los puestos operativos existentes en la bd. (YA ESTA IMPLEMENTADO)
 
 Usuario/operador> implementar un apartado donde el usuario pueda cambiar su contraseña en caso de que se le haya olvidado (esta puede en el sidebar)
 (YA ESTA EN EL SIDEBAR, FALTA DARLE FUNCIONALIDAD)
@@ -42,3 +42,4 @@ STATUS DEL SISTEMA:
 01/11/2022 - 12:11: El sistema ya registra la asistencia (inicio) falta hacer cuando termine la jornada (fin)
 03/11/2022 - 12:28: EL sistema ya registra inicio de jornada y fin de jornada (falta agregar una condicion, de que ya si 
 existe asistencia de un operador, no permitir que la registre de nuevo)
+03/11/2022 - 5:13: La idea de poner un dropdown en editar informacion puesto, ya esta implementado de forma correcta
