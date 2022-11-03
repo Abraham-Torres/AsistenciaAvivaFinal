@@ -99,15 +99,19 @@
 
           <div class="widget-user-image mb-4">
             <br>
-            
+          
+            {% if puestos.activo == False %}
             <button type="summit" class="btn btn-app bg-success">
               <i class="fas fa-clock"></i> Registrar
             </button>
-            {% if asistencia.activo == True %}
-            <button type="summit" class="btn btn-app bg-danger">
-              <i class="fas fa-clock"></i> Finalizar 
-            </button>
             {% endif %}
+
+            {%if puestos.activo == True %}
+            <a class="btn btn-app bg-danger" href="/ASISTENCIA-FINALIZADA">
+              <i class="fas fa-clock"></i> Finalizar 
+            </a>
+            {% endif %}
+          
           </div>
           <div class="card-footer">
 

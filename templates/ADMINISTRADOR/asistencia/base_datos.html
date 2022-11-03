@@ -26,7 +26,7 @@
                                     <th>Operativo</th>
                                     <th>Puesto</th>
                                     <th>Fin</th>
-                                    <th>Activo</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,17 +37,8 @@
                                     <td>{{ dato.Inicio}}</td>
                                     <td>{{ dato.Estado}}</td>
                                     <td>{{ dato.Puesto}}</td>
-                                    <td>{{ dato.Fin}}</td>
-                                    {% if dato.Activo == True %}
-                                    <td class="text-center"> <a href="" class="btn btn-success"> 
-                                        <i class="fas fa-solid fa-user nav-icon"></i> </a></td>
-                                    {% endif %}
+                                    <td>{{ dato.fin}}</td>
                                     
-                                    {% if dato.Activo == False %}
-                                    <td class="text-center"> <a href="" class="btn btn-danger"> 
-                                        <i class="fas fa-solid fa-user-minus"></i> </a></td>
-                                    {% endif %}
-                                </tr>
                                 {% endfor %}
                             </tbody>
 

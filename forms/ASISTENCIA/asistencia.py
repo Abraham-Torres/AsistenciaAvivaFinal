@@ -1,5 +1,5 @@
 class Asistencia:
-    def __init__(self, identificador, nombre, fecha, inicio, operativo, puesto, fin, activo):
+    def __init__(self, identificador, nombre, fecha, inicio, operativo, puesto, fin):
         self.identificador = identificador
         self.nombre = nombre
         self.fecha = fecha
@@ -7,7 +7,6 @@ class Asistencia:
         self.operativo = operativo
         self.puesto = puesto
         self.fin = fin
-        self.activo = activo
 
     def datosAsistenciaJson(self):
         return {
@@ -17,6 +16,5 @@ class Asistencia:
             'Inicio': self.inicio,
             'Estado': self.operativo,
             'Puesto': self.puesto,
-            'Fin': self.fin,
-            'Activo': self.activo
+            'fin': self.fin
         }

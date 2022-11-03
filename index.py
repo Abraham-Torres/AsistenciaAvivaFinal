@@ -19,6 +19,7 @@ import funciones.login.funciones_login as fun_log
 import funciones.aplicacion.funciones_aplicacion as fun_app
 
 
+
 app=Flask(__name__)
 
 app.secret_key= b'\xd0\xf7!ug\xb8/\x89:\x83\t&\x8c\xfa\xa6^'
@@ -151,6 +152,10 @@ def HomeApp():
 @app.route('/ASISTENCIA-EMPLEADO', methods = ['POST'])
 def AsistenciaEmpleado():
     return fun_asist.AsistenciaApp()    
+
+@app.route('/ASISTENCIA-FINALIZADA')
+def asistenciaEmpleadoFin():
+    return fun_asist.AsistenciaFinalizada()
 
 #**********************************************************************************************
 

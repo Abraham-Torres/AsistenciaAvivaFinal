@@ -10,12 +10,12 @@ COSAS POR HACER EN LA APP:
 2. Cambiar el sidebar (tiene el del admin)
 3. Implentar sesiones (YA ESTA)
 4. Implementar la seguridad en las rutas (que no puedan acceder sino estan logeados) (YA ESTA)
-5. Si ya registraron la asistencia desactivar/cambiar el boton
+5. Si ya registraron la asistencia desactivar/cambiar el boton (YA ESTA, SOLO FALTA PONERLE LA CONDICION DE QUE SI YA REGISTRO NO DEJARLO
+HACER DE NUEVO)
 6. Implementar que puedan subir foto de perfil
 
 
 NOTAS PARA MI:
-* Intenta por medio de la interpolacion jalar el script del reloj (app)
 * Revisa porque la seguridad de las rutas, ya que solo te retorna a iniciar sesion empleado y no permite entrar a admin (YA ESTA CORREGIDO)
 * Implementa la comprobacion de rutas en todo, ya que algunas veces cuando redirecciona manda al home del admin 
 
@@ -40,3 +40,5 @@ STATUS DEL SISTEMA:
 31/10/2022 - 4:33: Se ha implementado el live tale de fecha y hora.
 31/10/2022 - 5:50: Se intento hacer lo de asistencia (hay fallos de logica)
 01/11/2022 - 12:11: El sistema ya registra la asistencia (inicio) falta hacer cuando termine la jornada (fin)
+03/11/2022 - 12:28: EL sistema ya registra inicio de jornada y fin de jornada (falta agregar una condicion, de que ya si 
+existe asistencia de un operador, no permitir que la registre de nuevo)

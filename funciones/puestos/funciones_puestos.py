@@ -24,11 +24,12 @@ def Nuevo():
     telefono=request.form['telefono']
     tipo_puesto=request.form['tipo_puesto']
     password=request.form['password']
+    activo = False
     identificador=str(random.randint(0,2000))+correo
    
     if nombre and correo and edad and telefono and tipo_puesto and password:
             puestos=DB['puestos']
-            puesto=Puesto(identificador,nombre,correo,edad,telefono,tipo_puesto,password) 
+            puesto=Puesto(identificador,nombre,correo,edad,telefono,tipo_puesto,password,activo) 
             puestos.insert_one(puesto.datoPuestoJson())
             return redirect('/REGISTRAR-PUESTO')  
 
