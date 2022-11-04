@@ -44,3 +44,4 @@ STATUS DEL SISTEMA:
 03/11/2022 - 12:28: EL sistema ya registra inicio de jornada y fin de jornada (falta agregar una condicion, de que ya si 
 existe asistencia de un operador, no permitir que la registre de nuevo)
 03/11/2022 - 5:13: La idea de poner un dropdown en editar informacion puesto, ya esta implementado de forma correcta
+04/11/2022 - 4:09: Fue dia de hueva, trate de hacer el contador para los activos e inactivos
