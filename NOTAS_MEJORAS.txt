@@ -29,6 +29,11 @@ Usuario/operador> implementar un apartado donde el usuario pueda cambiar su cont
 
 Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta) (YA ESTA IMPLEMENTADO)
 
+Admin>Perfil: Hacer una vista para que el admin pueda ver su informacion (correo y password) y pueda actualizar su password (YA ESTA LA VISTA/FALTA HACER
+QUE PUEDA CAMBIAR SU PASSWORD)
+
+RUTA SECRETA DE ADMIN PARA CREAR CUENTAS DE ADMIN: Hacer una vista para hacer nuevas cuentas de admin, la ruta debera ser secreta
+
 STATUS DEL SISTEMA:
 27/10/2022 - 12:42: El modulo de puestos operativos ya es funcional en su totalidad
 27/10/2022 - 1:33: El modulo de estados operativos ya es funcional en su totalidad
@@ -46,3 +51,4 @@ existe asistencia de un operador, no permitir que la registre de nuevo)
 03/11/2022 - 5:13: La idea de poner un dropdown en editar informacion puesto, ya esta implementado de forma correcta
 04/11/2022 - 4:09: Fue dia de hueva, trate de hacer el contador para los activos e inactivos
 07/11/2022 - 11:48: Se hicieron correciones de aspecto visual, ademas de que lo del dropdown ya es correcto en su totalidad
+07/11/2022 - 12:51: La vista para ver la info del admin ya esta, falta implementar el que cambie su password

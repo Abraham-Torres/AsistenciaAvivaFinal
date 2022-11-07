@@ -17,6 +17,7 @@ import funciones.estadosOperativos.funciones_estadosOperativos as fun_status
 import funciones.asistencia.funciones_asistencia as fun_asist
 import funciones.login.funciones_login as fun_log
 import funciones.aplicacion.funciones_aplicacion as fun_app
+import funciones.infoPerfilAdmin.funciones_PerfilAdmin as fun_admin
 
 
 
@@ -28,6 +29,12 @@ app.secret_key= b'\xd0\xf7!ug\xb8/\x89:\x83\t&\x8c\xfa\xa6^'
 @app.route('/HOME')
 def HomePage():
     return fun_home.Home()
+
+#**********************************************************************************************
+#FUNCION DE INFORMACION PERFIL
+@app.route('/INFORMACION-ADMIN')
+def InformacionAdmin():
+    return fun_admin.InfoPerfil()
 
 #**********************************************************************************************
 
