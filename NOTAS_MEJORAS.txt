@@ -29,8 +29,7 @@ Usuario/operador> implementar un apartado donde el usuario pueda cambiar su cont
 
 Homepage> Implementar un reloj con la fecha y hora. (esto puede ser un sustito al calendario que esta) (YA ESTA IMPLEMENTADO)
 
-Admin>Perfil: Hacer una vista para que el admin pueda ver su informacion (correo y password) y pueda actualizar su password (YA ESTA LA VISTA/FALTA HACER
-QUE PUEDA CAMBIAR SU PASSWORD)
+Admin>Perfil: Hacer una vista para que el admin pueda ver su informacion (correo y password) y pueda actualizar su password (YA ESTA IMPLEMENTADO)
 
 RUTA SECRETA DE ADMIN PARA CREAR CUENTAS DE ADMIN: Hacer una vista para hacer nuevas cuentas de admin, la ruta debera ser secreta
 
@@ -54,3 +53,4 @@ existe asistencia de un operador, no permitir que la registre de nuevo)
 07/11/2022 - 12:51: La vista para ver la info del admin ya esta, falta implementar el que cambie su password
 07/11/2022 - 3:39: Se ha implementado la actualizacio de contraseñas para admin, pero no las converti a Hash (no puedo entrar al sistema xd)
 07/11/2022 - 4:16: La actualizacion de contraseñas para admin ya funciona en su totalidad e incluso las hace con hash
+07/11/2022 - 5:48: Dejo pendiente la vista de admin para agregar nuevos admins, ademas de actualizar sus datos

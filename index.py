@@ -36,11 +36,20 @@ def HomePage():
 def InformacionAdmin():
     return fun_admin.InfoPerfil()
 
-#ACTUALIZAR CONTRASEÑA PERFIL 
+#FUNCION ACTUALIZAR CONTRASEÑA PERFIL 
 @app.route('/ACTUALIZAR-CONTRASEÑA/<key>,<campo>',methods=['POST'])
-def Actualizar_Contraseña(key, campo):
-    return fun_admin.Actualizar_password(key, campo)
+def ActualizarContraseña(key, campo):
+    return fun_admin.ActualizarPassword(key, campo)
 
+#FUNCION DE INGRESAR NUEVO ADMIN (RUTA SECRETA)
+@app.route('/', methods=['POST'])
+def NuevoAdministrador():
+    return     
+
+#FUNCION ACTUALIZAR PERFIL
+@app.route('/ACTUALIZAR-ADMINISTRADOR/<key>,<campo>', methods=['POST'])
+def ActualizarAdministrador(key, campo):
+    return fun_admin.ActualizarAdministrador(key, campo)
 #**********************************************************************************************
 #FUNCION PUESTO(FORMULARIO)
 @app.route('/REGISTRAR-PUESTO')

@@ -64,7 +64,7 @@
         <!--Modales-->
         <div class="modal fade" id="contraseña">
             <div class="modal-dialog modal-md">
-                <form class="modal-content" action="{{url_for('Actualizar_Contraseña',key=administrador.correo,campo='password')}}" method="post">
+                <form class="modal-content" action="{{url_for('ActualizarContraseña',key=administrador.correo,campo='password')}}" method="post">
                     <div class="modal-header">
                         <h4 class="modal-title">Modificar Contraseña</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
@@ -86,7 +86,7 @@
 
         <div class="modal fade" id="nombre">
             <div class="modal-dialog modal-md">
-                <form class="modal-content" action="" method="post">
+                <form class="modal-content" action="{{url_for('ActualizarAdministrador',key=administrador.identificador,campo='nombre')}}" method="post">
                     <div class="modal-header">
                         <h4 class="modal-title">Modificar Nombre</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">

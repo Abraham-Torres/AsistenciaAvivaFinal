@@ -69,7 +69,7 @@
 
                   <!--select multiple-->
                   <div class="form-group text-center">
-                    <select name="EstadoOperativo" class="form-control">
+                    <select name="EstadoOperativo" class="form-control rounded-pill">
                       {% for dato in Estado %}
                       <option value="{{dato.EstadoOperativo}}" class="form-control">{{dato.EstadoOperativo}}
                         {% endfor %}
@@ -101,7 +101,7 @@
             <br>
           
             {% if puestos.activo == False %}
-            <button type="summit" class="btn btn-app bg-success">
+            <button type="summit" class="btn btn-app bg-success rounded-pill">
               <i class="fas fa-clock"></i> Registrar
             </button>
             {% endif %}
