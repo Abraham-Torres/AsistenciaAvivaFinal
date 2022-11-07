@@ -1,5 +1,6 @@
 from flask import render_template, session, request
 from data_base import database as mongodb
+from werkzeug.security import generate_password_hash
 
 
 DB = mongodb.dbConecction()
@@ -14,5 +15,7 @@ def Actualizar_password(key,campo):
     AdministradorDB = DB['administrador']
     dato=request.form['dato']
     if dato:
+        dato = generate_password_hash(dato, method = 'sha256')
         AdministradorDB.update_one({'correo':key},{'$set':{campo:dato}})
+        print(dato)
     return InfoPerfil()      
