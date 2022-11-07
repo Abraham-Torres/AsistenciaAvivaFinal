@@ -18,69 +18,64 @@
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="" class="label">Nombre completo</label>
-                  <input type="text" class="form-control" name="nombre" placeholder="Nombre completo">
+                  <input type="text" class="form-control rounded-pill" name="nombre" placeholder="Nombre completo">
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="" class="label">Correo electronico</label>
-                  <input type="email" class="form-control" name="correo" placeholder="Correo electronico">
+                  <input type="email" class="form-control rounded-pill" name="correo" placeholder="Correo electronico">
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="" class="label">Edad</label>
-                  <input type="number" class="form-control" name="edad" placeholder="Edad">
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group">
-                  <label for="" class="label">Telefono</label>
-                  <input type="number" class="form-control" name="telefono" placeholder="">
+                  <input type="number" class="form-control rounded-pill" name="edad" placeholder="Edad">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
+                  <label for="" class="label">Telefono</label>
+                  <input type="number" class="form-control rounded-pill" name="telefono" placeholder="">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
                   <label for="" class="label">Operador</label>
-                  <select name="tipo_puesto" id="" class="form-control">
+                  <select name="tipo_puesto" id="" class="form-control rounded-pill">
                     {% for dato in op %}
                     <option value="{{dato.PuestoOperativo}}" class="form-control">{{dato.PuestoOperativo}}
                     </option>{% endfor %}
                   </select>
-
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="" class="label">Contraseña</label>
-                  <input type="password" class="form-control"name="password">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label for="" class="label">Confirmar contraseña</label>
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control rounded-pill" name="password" value="Aviva">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="form-group text-center">
-                  <button type="submit" class="btn btn-primary">Guardar  <i class="fa fa-solid fa-user-plus"></i></button>
+                  <button type="submit" class="btn btn-primary">Guardar <i
+                      class="fa fa-solid fa-user-plus"></i></button>
                 </div>
               </div>
             </div>
+
           </div>
         </form>
 
 
       </section>
-    </div> 
+    </div>
     <!-- /.content-wrapper -->
     {% include 'ADMINISTRADOR/modulos/footer.html' %}
     {% include 'ADMINISTRADOR/modulos/side-bar-control.html' %}

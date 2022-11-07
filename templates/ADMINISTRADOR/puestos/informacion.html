@@ -112,7 +112,7 @@
                               class="btn btn-xs btn-link btnOpenEdit"><i class="fa-solid fas fa-pen"></i>
                               Editar</button>
                           </small>
-                          <p id="vtitle">{{puestos.puesto}}<span class="text-muted font-italic"></span></p>
+                          <p id="vtitle">{{puestos.tipo_puesto}}<span class="text-muted font-italic"></span></p>
                         </div>
                         
                       </div>
@@ -142,7 +142,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <input type="text" value="{{puestos.nombre}}" class="form-control" name="dato" id="dato">
+              <input type="text" value="{{puestos.nombre}}" class="form-control rounded-pill" name="dato" id="dato">
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -164,7 +164,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <input type="text" value="{{puestos.correo}}" class="form-control" name="dato" id="dato">
+              <input type="text" value="{{puestos.correo}}" class="form-control rounded-pill" name="dato" id="dato">
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -186,7 +186,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <input type="text" value="{{puestos.edad}}" class="form-control" name="dato" id="dato">
+              <input type="text" value="{{puestos.edad}}" class="form-control rounded-pill" name="dato" id="dato">
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -199,7 +199,7 @@
       <!-- /.content -->
       <div class="modal fade" id="puesto">
         <div class="modal-dialog modal-md">
-          <form class="modal-content" action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='puesto')}}"
+          <form class="modal-content" action="{{url_for('Actualizar_Puesto',key=puestos.identificador,campo='tipo_puesto')}}"
             method="post">
             <div class="modal-header">
               <h4 class="modal-title">Modificar puesto</h4>
@@ -208,9 +208,9 @@
               </button>
             </div>
             <div class="modal-body">
-              <select  class="form-control" name="dato" id="dato">
+              <select  class="form-control rounded-pill" name="dato" id="dato">
                 {% for dato in operativo %}
-                <option value="{{dato.PuestoOperativo}}" class="form-control">{{dato.PuestoOperativo}}
+                <option value="{{dato.PuestoOperativo}}" class="form-control rounded-pill">{{dato.PuestoOperativo}}
                 </option>{% endfor %}
               </select> 
             </div>
@@ -234,7 +234,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <input type="text" value="{{puestos.telefono}}" class="form-control" name="dato" id="dato">
+              <input type="text" value="{{puestos.telefono}}" class="form-control rounded-pill" name="dato" id="dato">
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

@@ -5,6 +5,6 @@ DB = mongodb.dbConecction()
 
 def Home():
     titulo="Inicio"
-    return render_template('/index.html',titulo=titulo,activo=activo)
+    return render_template('/index.html',titulo=titulo)
 
     

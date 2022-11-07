@@ -45,3 +45,4 @@ STATUS DEL SISTEMA:
 existe asistencia de un operador, no permitir que la registre de nuevo)
 03/11/2022 - 5:13: La idea de poner un dropdown en editar informacion puesto, ya esta implementado de forma correcta
 04/11/2022 - 4:09: Fue dia de hueva, trate de hacer el contador para los activos e inactivos
+07/11/2022 - 11:48: Se hicieron correciones de aspecto visual, ademas de que lo del dropdown ya es correcto en su totalidad
