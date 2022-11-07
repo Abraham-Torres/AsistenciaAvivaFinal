@@ -5,9 +5,6 @@ DB = mongodb.dbConecction()
 
 def Home():
     titulo="Inicio"
-    ActivosDB = DB['puestos']
-    act= False
-    activo = ActivosDB.count_documents({})
     return render_template('/index.html',titulo=titulo,activo=activo)
 
     
