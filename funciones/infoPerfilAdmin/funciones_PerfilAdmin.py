@@ -1,4 +1,4 @@
-from flask import render_template, session
+from flask import render_template, session, request
 from data_base import database as mongodb
 
 
@@ -9,3 +9,10 @@ def InfoPerfil():
     AdministradorDB = DB['administrador']
     Administrador = AdministradorDB.find_one({'correo':session['usuario-administrador']})
     return render_template('/ADMINISTRADOR/info_perfil/informacion_admin.html',titulo = titulo, administrador = Administrador)
+
+def Actualizar_password(key,campo):
+    AdministradorDB = DB['administrador']
+    dato=request.form['dato']
+    if dato:
+        AdministradorDB.update_one({'correo':key},{'$set':{campo:dato}})
+    return InfoPerfil()      

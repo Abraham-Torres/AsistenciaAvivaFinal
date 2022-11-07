@@ -52,3 +52,4 @@ existe asistencia de un operador, no permitir que la registre de nuevo)
 04/11/2022 - 4:09: Fue dia de hueva, trate de hacer el contador para los activos e inactivos
 07/11/2022 - 11:48: Se hicieron correciones de aspecto visual, ademas de que lo del dropdown ya es correcto en su totalidad
 07/11/2022 - 12:51: La vista para ver la info del admin ya esta, falta implementar el que cambie su password
+07/11/2022 - 3:39: Se ha implementado la actualizacio de contraseñas para admin, pero no las converti a Hash (no puedo entrar al sistema xd)
